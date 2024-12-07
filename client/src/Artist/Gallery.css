@@ -1,0 +1,82 @@
+/* General Styles */
+.gallery-body {
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+  }
+  
+  .gallery-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .artwork-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .artwork-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Artwork image styling */
+  .artwork-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+    object-fit: cover; /* Ensure images are properly cropped */
+  }
+  
+  /* Artwork details section */
+  .artwork-details {
+    padding: 1rem;
+  }
+  
+  .artwork-artist {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .artwork-year {
+    font-size: 1.1rem;
+    color: #777;
+    margin: 0.5rem 0;
+  }
+  
+  .artwork-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .gallery-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
